@@ -1,5 +1,8 @@
 package com.example.repository_pattern_v1.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class UserResponse(
@@ -13,21 +16,5 @@ data class UserResponse(
     var support : Support
 )
 
-//@Entity(tableName = "user_table") // Remove
-data class User(
-    //   @PrimaryKey(autoGenerate = true) // Remove
-    var id: Int,
-    var email : String,
-    @SerializedName("first_name")
-    // @ColumnInfo(name = "first_name") // Remove
-    var firstName : String,
-    //@ColumnInfo(name = "last_name") // Remove
-    @SerializedName("last_name")
-    var lastName : String,
-    var avatar : String
-)
 
-data class Support(
-    var url : String,
-    var text: String
-)
+
