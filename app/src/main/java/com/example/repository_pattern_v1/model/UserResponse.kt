@@ -16,21 +16,5 @@ data class UserResponse(
     var support : Support
 )
 
-@Entity(tableName = "user_table")
-data class User(
- @PrimaryKey(autoGenerate = true)
-    var id: Int,
-    var email : String,
-    @SerializedName("first_name")
- @ColumnInfo(name = "first_name")
-    var firstName : String,
-@ColumnInfo(name = "last_name")
-    @SerializedName("last_name")
-    var lastName : String,
-    var avatar : String
-)
 
-data class Support(
-    var url : String,
-    var text: String
-)
+
